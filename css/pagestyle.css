@@ -1,0 +1,48 @@
+body{
+    background-color: ghostwhite;
+}
+
+.content{
+    position: relative;
+    
+}
+
+.page-content{
+    display:inline-block;
+    float:left;
+    position: absolute;
+    border-left-width: 2px;
+    border-left-style:solid;
+    border-left-color:black;
+
+}
+
+
+a{
+    display:block;
+    margin-bottom: 1rem;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.hyperlinks{
+
+    display:inline-block;
+    float:left;
+   
+
+}
+.page-title{
+    border-bottom-width:2px;
+    border-bottom-style:solid;
+    border-bottom-color:black;
+}
+
+h1{
+    text-align: center;
+}
+
