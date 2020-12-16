@@ -45,13 +45,14 @@
 
     <div class="announcement">
         <p id="header"><b>Αποστολή e-mail μέσω web φόρμας</b></p>
-        <form>
+        <form action="MAILTO:georgeraitsidis@gmail.com" method="post" enctype="text/plain">
             <label for="sname">Αποστολέας</label>
             <input type="text" id="sname" name="sname"><br><br>
             <label for="topic">Θέμα</label>
             <input type="text" id="topic" name="topic"><br><br>
             <label for="ttext">Κείμενο</label>
-            <textarea id="ttext">Your text</textarea><br>
+            <textarea id="ttext">Your text</textarea><br><br>
+            <button type="submit">Αποστολή</button>
         </form>
         
     
