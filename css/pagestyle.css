@@ -42,7 +42,8 @@ h1{
 
 .announcement{
     background-color: Gainsboro;
-    width: 100%;
+    margin-bottom:20px;
+    
 }
 #header{
     color:green;
