@@ -1,59 +1,67 @@
-body{
-    background-color: ghostwhite;
+body {
+  background-color: ghostwhite;
 }
 
-.content{
-    position: relative;
-    
+.content {
+  position: relative;
 }
 
-.page-content{
-    display:inline-block;
-    float:left;
-    position: absolute;
-    border-left-width: 2px;
-    border-left-style:solid;
-    border-left-color:black;
-    width:100%;
-
+.page-content {
+  display: inline-block;
+  float: left;
+  position: absolute;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: black;
+  width: 100%;
 }
 
-
-button{
-    display: block;
-    color:green;
-    margin-bottom: 20px;
-    font-size:20px;
-    width:205px;
-    margin-right:10px;
-    
+button {
+  display: block;
+  color: green;
+  margin-bottom: 20px;
+  font-size: 20px;
+  width: 205px;
+  margin-right: 10px;
 }
 
-.hyperlinks{
-
-    display:inline-block;
-    float:left;
-   
-
+.hyperlinks {
+  display: inline-block;
+  float: left;
 }
-.page-title{
-    border-bottom-width:2px;
-    border-bottom-style:solid;
-    border-bottom-color:black;
+.page-title {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-.announcement{
-    background-color: Gainsboro;
-    margin-bottom:20px;
-    margin-left:2px;
+.announcement {
+  background-color: Gainsboro;
+  margin-bottom: 20px;
+  margin-left: 2px;
 }
-#header{
-    color:green;
+#header {
+  color: green;
 }
-#duedate{
-    color:red;
+#duedate {
+  color: red;
+}
+
+.login-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#username_field,
+#password_field {
+    width:200px;
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+
 }
