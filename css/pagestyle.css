@@ -59,12 +59,16 @@ h1 {
 }
 #username_field,
 #password_field {
-    width:200px;
-    box-sizing:border-box;
-    padding: 0;
-    margin: 0;
-
+  width: 200px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-.tutor_edit{
-    display:none;
+.tutor_edit {
+  display: none;
+}
+.log_out {
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }
