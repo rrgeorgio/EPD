@@ -79,4 +79,6 @@ h1 {
 .form{
   margin-left:2px;
 }
-
+#fileToUpload{
+  margin-left: 2px;
+}
