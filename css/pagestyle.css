@@ -64,9 +64,6 @@ h1 {
   padding: 0;
   margin: 0;
 }
-.tutor_edit {
-  display: none;
-}
 .log_out {
   position: absolute;
   right: 10px;
