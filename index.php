@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css\pagestyle.css" />
-    <script src="js/editor.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/classic/ckeditor.js"></script>
     <title>Αρχική Σελίδα</title>
   </head>
 
@@ -14,7 +12,7 @@
       <form action="logout.php" method="post">
       <input class="log_out" type="submit" value="Log out"/>
       </form>
-      <h1>Ανακοινώσεις</h1>
+      <h1>Αρχική Σελίδα</h1>
     </div>
 
     <div class="content">
@@ -41,21 +39,25 @@
       </div>
 
       <div class="page-content">
-        <div class="create-content">
-        <h1>Προσθήκη νέας ανακοίνωσης</h1>
-        <form action="upload.php" method="post">
-        <label class="form" for="title">Τίτλος</label>
-        <input type="text" name="title" id="anntitle" placeholder="Τίτλος ανακοίνωσης" required></br></br>
-         <label class="form" for="anntheme">Θέμα</label>
-        <input type="text" name="theme" id="anntheme" placeholder="Θέμα" required></br></br>
-        <label class="form" for="content">Κείμενο</label>
-         <textarea name="content" id="editor"></textarea>
-         <script>
-         createEditor();
-         </script>
-         </div>
-        <button class="sendcontent" type="submit">Αποστολή</button>
-        </form>
+        <p>
+          Καλώς ορίσατε στον ιστότοπο μας.Στόχος του συγκεκριμένου ιστοτόπου
+          είναι:
+        </p>
+        <ul>
+          <li>Εκμάθηση της γλώσσας HTML</li>
+          <li>Εξοικείωση με το CSS</li>
+          <li>Εκμάθηση της PHP</li>
+          <li>Δημιουργία ιστοσελίδων με την χρήση των παραπάνω</li>
+        </ul>
+        <p>Στο διπλανό μενου θα βρείτε κάποιους χρήσιμους συνδέσμους όπως:</p>
+        <ol>
+          <li>Ανακοινώσεις για το μάθημα</li>
+          <li>Επικοινωνία με τον διδάσκοντα</li>
+          <li>Χρήσιμα έγγραφα του μαθήματος</li>
+          <li>Εργασίες που ανατίθενται από τον διδάσκοντα</li>
+        </ol>
+
+        <img src="htmlimage.jpg" alt="Εικόνα" />
       </div>
     </div>
   </body>
