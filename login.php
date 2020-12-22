@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +23,7 @@
 
   <body>
     <div class="login-page">
-    <form>
+    <form method="post">
         <label for="username">Login</label>
         <input type="text" id="username_field" name="username" placeholder="Όνομα χρήστη" required></br></br>
         <label for="password">Password</label>
