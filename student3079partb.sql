@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 22 Δεκ 2020 στις 12:38:39
+-- Χρόνος δημιουργίας: 22 Δεκ 2020 στις 14:21:25
 -- Έκδοση διακομιστή: 10.4.14-MariaDB
 -- Έκδοση PHP: 7.2.34
 
@@ -74,6 +74,15 @@ CREATE TABLE `users` (
   `password` varchar(20) NOT NULL,
   `role` enum('tutor','student') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `users`
+--
+
+INSERT INTO `users` (`name`, `surname`, `loginname`, `password`, `role`) VALUES
+('Γιώργος', 'Κεφίρογλου', 'gkefir', 'kefir123', 'student'),
+('Αντώνης', 'Πάρογλου', 'parant', 'alepmad12', 'student'),
+('Αναστάσιος', 'Παταντζίδης', 'anastpa', '12051958ap', 'tutor');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
