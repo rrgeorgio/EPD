@@ -97,19 +97,10 @@
             }
             </script>";
           }
-        if($_SESSION["role"]=="tutor"){
+         if($_SESSION["role"]=="tutor"){
           showElements();
-        }
-      ?>
-
+        }?>
 
 </div>
-
-
-
 </body>
-
-
-
-
 </html>
