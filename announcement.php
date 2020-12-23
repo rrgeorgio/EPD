@@ -64,18 +64,18 @@
         <a href="#top">top</a>
         <?php
           session_start();
-          function showElements(){
-            echo "<script type='text/javascript'>
+          function showElements(){ ?>
+            <script type='text/javascript'>
             var elements = document.getElementsByClassName('tutor_edit');
             for (var i = 0, len = elements.length; i < len; i++) {
               elements[i].style.visibility = 'visible';
             }
-            </script>";
-          }
-        if($_SESSION["role"]=="tutor"){
+            </script>
+        <?php }
+         if($_SESSION["role"]=="tutor"){
           showElements();
         }
-      ?>
+        ?>
       </div>
     </div>
   </body>
