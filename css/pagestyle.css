@@ -7,12 +7,12 @@ body {
 }
 
 .page-content {
-  display: inline-block;
+  display:inline-block;
   float: left;
   position: absolute;
   border-left-width: 2px;
   border-left-style: solid;
-  border-left-color: black;
+  border-left-color:black;
   width: 1000px;
 }
 
@@ -26,7 +26,7 @@ button {
 }
 
 .hyperlinks {
-  display: inline-block;
+  display:inline-block;
   float: left;
 }
 .page-title {
@@ -69,19 +69,19 @@ h1 {
   right: 10px;
   top: 5px;
 }
-.sendcontent{
+.sendcontent {
   margin-top:20px;
   float:right;
 }
-.form{
+.form {
   margin-left:2px;
 }
-#fileToUpload{
+#fileToUpload {
   margin-left: 2px;
 }
-.create-content{
+.create-content {
   border-style:ridge;
 }
 .tutor_edit{
-  visibility:hidden;
+  visibility: hidden;
 }

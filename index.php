@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  
-  if($_SESSION["role"]=="tutor"){
-    echo "OK";
-  }
-  
-?>
 
 <!DOCTYPE html>
 <html>

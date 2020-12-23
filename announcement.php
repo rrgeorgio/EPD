@@ -40,9 +40,9 @@
       </div>
 
       <div class="page-content">
-      <div class="tutor_edit">
-      <a href="addannouncement.php">Προσθήκης νέας ανακοίνωσης</a>
-      </div>
+        <div class="tutor_edit">
+          <a href="addannouncement.php">Προσθήκης νέας ανακοίνωσης</a>
+        </div>
         <div class="announcement">
           <p id="header"><b>Ανακοίνωση 1</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>
           <p><b>Ημερομηνία:</b>12/12/2008</p>
@@ -62,6 +62,20 @@
         </div>
 
         <a href="#top">top</a>
+        <?php
+          session_start();
+          function showElements(){
+            echo "<script type='text/javascript'>
+            var elements = document.getElementsByClassName('tutor_edit');
+            for (var i = 0, len = elements.length; i < len; i++) {
+              elements[i].style.visibility = 'visible';
+            }
+            </script>";
+          }
+        if($_SESSION["role"]=="tutor"){
+          showElements();
+        }
+      ?>
       </div>
     </div>
   </body>

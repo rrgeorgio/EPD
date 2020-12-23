@@ -1,10 +1,14 @@
 <?php
     session_start();
+    function alert($msg) {
+      echo "<script type='text/javascript'>alert('$msg');</script>";
+    }
     if(isset($_SESSION["loggedin"])&& $_SESSION["loggedin"]==true){
       header("location:index.php");
       exit;
     }
     require_once "config.php";
+
 
     $username=$pass="";
     if(isset($_POST["username"])){
@@ -35,14 +39,14 @@
                 $_SESSION["surname"]=$surname;
                 header("location:index.php");
               }else{
-                echo "The password you entered was not valid";
+                alert("The password you entered was not valid");
               }
             }
           } else{
-            echo "The username was not found";
+            alert("The username was not found");
           }
         } else{
-          echo "Something wrong i hold my head";
+          alert("There was an unexpected error. Please try again later");
         }
         mysqli_stmt_close($stmt);
       }
