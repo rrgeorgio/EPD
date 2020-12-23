@@ -18,45 +18,45 @@
 
     <div class="content">
       <div class="hyperlinks">
-        <form action="index.html">
+        <form action="index.php">
           <button type="submit">Αρχική Σελίδα</button>
         </form>
 
-        <form action="announcement.html">
+        <form action="announcement.php">
           <button type="submit">Ανακοινώσεις</button>
         </form>
 
-        <form action="communication.html">
+        <form action="communication.php">
           <button type="submit">Επικοινωνία</button>
         </form>
 
-        <form action="documents.html">
+        <form action="documents.php">
           <button type="submit">Έγγραφα μαθήματος</button>
         </form>
 
-        <form action="homework.html">
+        <form action="homework.php">
           <button type="submit">Εργασίες</button>
         </form>
       </div>
 
       <div class="page-content">
       <div class="tutor_edit">
-      <a href="addannouncement.html">Προσθήκης νέας ανακοίνωσης</a>
+      <a href="addannouncement.php">Προσθήκης νέας ανακοίνωσης</a>
       </div>
         <div class="announcement">
-          <p id="header"><b>Ανακοίνωση 1</b><a class="tutor_edit" href="deleteannouncement.html">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.html">[επεξεργασία]</a></p>
+          <p id="header"><b>Ανακοίνωση 1</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>
           <p><b>Ημερομηνία:</b>12/12/2008</p>
           <p><b>Θέμα:</b>Έναρξη μαθημάτων</p>
           <p>Τα μαθήματα αρχίζουν τη Δευτέρα 17/12/2008</p>
         </div>
 
         <div class="announcement">
-          <p id="header"><b>Ανακοίνωση 2</b><a class="tutor_edit" href="deleteannouncement.html">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.html">[επεξεργασία]</a></p>
+          <p id="header"><b>Ανακοίνωση 2</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>
           <p><b>Ημερομηνία:</b>15/12/2012</p>
           <p><b>Θέμα:</b>Ανάρτηση εργασίας</p>
           <p>
             Η 1η εργασία έχει ανακοινωθεί στην ιστοσελίδα
-            <a href="homework.html">"Εργασίες"</a>
+            <a href="homework.php">"Εργασίες"</a>
           </p>
           <p>Τα μαθήματα αρχίζουν τη Δευτέρα 17/12/2008</p>
         </div>

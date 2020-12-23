@@ -16,30 +16,30 @@
     </div>
 
     <div class="hyperlinks">
-      <form action="index.html">
+      <form action="index.php">
         <button type="submit">Αρχική Σελίδα</button>
       </form>
 
-      <form action="announcement.html">
+      <form action="announcement.php">
         <button type="submit">Ανακοινώσεις</button>
       </form>
 
-      <form action="communication.html">
+      <form action="communication.php">
         <button type="submit">Επικοινωνία</button>
       </form>
 
-      <form action="documents.html">
+      <form action="documents.php">
         <button type="submit">Έγγραφα μαθήματος</button>
       </form>
 
-      <form action="homework.html">
+      <form action="homework.php">
         <button type="submit">Εργασίες</button>
       </form>
     </div>
 
     <div class="page-content">
      <div class="tutor_edit">
-      <a href="adddocument.html">Προσθήκη νέου εγγράφου</a>
+      <a href="adddocument.php">Προσθήκη νέου εγγράφου</a>
       </div>
       <div class="announcement">
         <p id="header"><b>Τίτλος εγγράφου 1</b></p>

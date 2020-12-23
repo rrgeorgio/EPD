@@ -22,23 +22,23 @@
 
 <div class="hyperlinks">
 
-<form action="index.html">
+<form action="index.php">
 <button type="submit">Αρχική Σελίδα</button>
 </form>
 
-<form action="announcement.html">
+<form action="announcement.php">
 <button type="submit">Ανακοινώσεις</button>
 </form>
 
-<form action="communication.html">
+<form action="communication.php">
 <button type="submit">Επικοινωνία</button>
 </form>
 
-<form action="documents.html">
+<form action="documents.php">
 <button type="submit">Έγγραφα μαθήματος</button>
 </form>
 
-<form action="homework.html">
+<form action="homework.php">
 <button type="submit">Εργασίες</button>
 </form>
 
@@ -46,7 +46,7 @@
 
 <div class="page-content">
     <div class="tutor_edit">
-      <a href="addhomework.html">Προσθήκη νέας εργασίας</a>
+      <a href="addhomework.php">Προσθήκη νέας εργασίας</a>
     </div>
     <div class="announcement">
         <p id="header"><b>Εργασία 1</b></p>

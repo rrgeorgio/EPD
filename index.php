@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,23 +18,23 @@
 
     <div class="content">
       <div class="hyperlinks">
-        <form action="index.html">
+        <form action="index.php">
           <button type="submit">Αρχική Σελίδα</button>
         </form>
 
-        <form action="announcement.html">
+        <form action="announcement.php">
           <button type="submit">Ανακοινώσεις</button>
         </form>
 
-        <form action="communication.html">
+        <form action="communication.php">
           <button type="submit">Επικοινωνία</button>
         </form>
 
-        <form action="documents.html">
+        <form action="documents.php">
           <button type="submit">Έγγραφα μαθήματος</button>
         </form>
 
-        <form action="homework.html">
+        <form action="homework.php">
           <button type="submit">Εργασίες</button>
         </form>
       </div>
