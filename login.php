@@ -24,13 +24,15 @@
         if(mysqli_stmt_execute($stmt)){
           mysqli_stmt_store_result($stmt);
           if(mysqli_stmt_num_rows($stmt)==1){
-            mysqli_stmt_bind_result($stmt,$name,$password,$usname,$password,$role);
+            mysqli_stmt_bind_result($stmt,$name,$surname,$usname,$password,$role);
             if(mysqli_stmt_fetch($stmt)){
               if(password_verify($password,$hash)){
                 session_start();
                 $_SESSION["loggedin"]=true;
                 $_SESSION["username"]=$username;
                 $_SESSION["role"]=$role;
+                $_SESSION["name"]=$name;
+                $_SESSION["surname"]=$surname;
                 header("location:index.php");
               }else{
                 echo "The password you entered was not valid";
