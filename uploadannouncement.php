@@ -17,4 +17,5 @@ unset($_POST["theme"]); unset($_POST["content"]);
 echo("
     <script> alert(\"Επιτυχής δημιουργία ανακοίνωσης!\") </script>
     ");
+    header("Location: announcement.php");
 ?>
