@@ -12,8 +12,8 @@ VALUES (\"".$current_date."\",\"".htmlentities($_POST["theme"],ENT_QUOTES)."\",\
 
 $con = include "config.php";
 mysqli_query($con,$insert_post_sql_query);
-mysql_query("SET NAMES 'utf8'");
-mysql_query("SET CHARACTER SET 'utf8'");
+mysqli_query("SET NAMES 'utf8'");
+mysqli_query("SET CHARACTER SET 'utf8'");
 
 unset($_POST["theme"]); unset($_POST["content"]);
 echo("
