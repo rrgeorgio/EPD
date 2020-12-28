@@ -6,7 +6,7 @@
     <link type="text/css" rel="stylesheet" href="css\pagestyle.css" />
     <script src="js/editor.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/classic/ckeditor.js"></script>
-    <title>Αρχική Σελίδα</title>
+    <title>Προσθήκη νέας ανακοίνωσης</title>
   </head>
 
   <body>
@@ -43,9 +43,7 @@
       <div class="page-content">
         <div class="create-content">
         <h1>Προσθήκη νέας ανακοίνωσης</h1>
-        <form action="upload.php" method="post">
-        <label class="form" for="title">Τίτλος</label>
-        <input type="text" name="title" id="anntitle" placeholder="Τίτλος ανακοίνωσης" required></br></br>
+        <form action="uploadannouncement.php" method="post">
          <label class="form" for="anntheme">Θέμα</label>
         <input type="text" name="theme" id="anntheme" placeholder="Θέμα" required></br></br>
         <label class="form" for="content">Κείμενο</label>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 22 Δεκ 2020 στις 14:21:25
+-- Χρόνος δημιουργίας: 28 Δεκ 2020 στις 19:29:49
 -- Έκδοση διακομιστή: 10.4.14-MariaDB
 -- Έκδοση PHP: 7.2.34
 
@@ -83,6 +83,50 @@ INSERT INTO `users` (`name`, `surname`, `loginname`, `password`, `role`) VALUES
 ('Γιώργος', 'Κεφίρογλου', 'gkefir', 'kefir123', 'student'),
 ('Αντώνης', 'Πάρογλου', 'parant', 'alepmad12', 'student'),
 ('Αναστάσιος', 'Παταντζίδης', 'anastpa', '12051958ap', 'tutor');
+
+--
+-- Ευρετήρια για άχρηστους πίνακες
+--
+
+--
+-- Ευρετήρια για πίνακα `announcements`
+--
+ALTER TABLE `announcements`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Ευρετήρια για πίνακα `documents`
+--
+ALTER TABLE `documents`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Ευρετήρια για πίνακα `homework`
+--
+ALTER TABLE `homework`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT για άχρηστους πίνακες
+--
+
+--
+-- AUTO_INCREMENT για πίνακα `announcements`
+--
+ALTER TABLE `announcements`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT για πίνακα `documents`
+--
+ALTER TABLE `documents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT για πίνακα `homework`
+--
+ALTER TABLE `homework`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
