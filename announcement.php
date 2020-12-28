@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+  require("config.php");
+  session_start();
+  
+?>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -63,7 +68,6 @@
 
         <a href="#top">top</a>
         <?php
-          session_start();
           function showElements(){ ?>
             <script type='text/javascript'>
             var elements = document.getElementsByClassName('tutor_edit');
