@@ -43,7 +43,7 @@
       <div class="page-content">
         <div class="create-content">
         <h1>Προσθήκη νέου εγγράφου</h1>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form action="uploaddocument.php" method="post" enctype="multipart/form-data">
         <label class="form" for="title">Τίτλος</label>
         <input type="text" name="title" id="anntitle" placeholder="Τίτλος εγγράφου" required></br></br>
         <label class="form" for="content">Κείμενο</label>
