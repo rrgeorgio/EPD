@@ -51,7 +51,7 @@
          <script>
          createEditor();
          </script>
-         <input type="file" name="fileToUpload" id="fileToUpload">
+         <input type="file" name="fileToUpload" id="ufile">
          </div>
         <button class="sendcontent" type="submit">Αποστολή</button>
         </form>
