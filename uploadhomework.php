@@ -5,7 +5,6 @@ session_start();
     date_default_timezone_set('Europe/Athens');
     $duedate= date('Y-m-d',strtotime($_POST['date']));
     $current_date=date('Y-m-d');
-    $theme="";
     $text="Η ημερομηνία παράδοσης της εργασίας είναι ".$duedate;
     $file=$_FILES['fileToUpload'];
     $filename=$_FILES['fileToUpload']['name'];
@@ -26,14 +25,12 @@ session_start();
             $con = include "config.php";
             mysqli_query($con,$insert_post_sql_query);
             unset($_POST["content1"]);unset($_POST["content2"]);
+            $theme="";
             $insert_post_sql_query=
             "INSERT INTO `announcements`(`date`,`theme`,`text`) 
             VALUES (\"".$current_date."\",\"".$theme."\",\"".$text."\")";
-            $con = include "config.php";
             mysqli_query($con,$insert_post_sql_query);
-            echo ("<script> alert(\"Η εργασία μεταφορτώθηκε επιτυχώς\");window.location.href='homework.php';</script>");
             
-        
         } else{
             echo ("<script> alert(\"Υπερβολικά μεγάλο μέγεθος αρχείου\");window.location.href='addhomework.php';</script>");
 
