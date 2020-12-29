@@ -43,7 +43,7 @@
       <div class="page-content">
         <div class="create-content">
         <h1>Προσθήκη νέας εργασίας</h1>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form action="uploadhomework.php" method="post" enctype="multipart/form-data">
         <label class="form" for="title">Τίτλος</label>
         <input type="text" name="title" id="anntitle" placeholder="Τίτλος εργασίας" required></br></br>
         <label class="form" for="content1">Στόχοι</label>
