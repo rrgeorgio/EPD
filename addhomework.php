@@ -44,14 +44,12 @@
         <div class="create-content">
         <h1>Προσθήκη νέας εργασίας</h1>
         <form action="uploadhomework.php" method="post" enctype="multipart/form-data">
-        <label class="form" for="title">Τίτλος</label>
-        <input type="text" name="title" id="anntitle" placeholder="Τίτλος εργασίας" required></br></br>
         <label class="form" for="content1">Στόχοι</label>
          <textarea name="content1" id="editor"></textarea></br></br>
          <label class="form" for="content2">Παραδοτέα</label>
          <textarea name="content2" id="editor"></textarea></br></br>
          <label class="form" for="date">Ημερομηνία παράδοσης</label>
-         <input type="date" name="date" id="date"></br></br>
+         <input type="date" name="date"></br></br>
          <input type="file" name="fileToUpload" id="fileToUpload">
          </div>
         <button class="sendcontent" type="submit">Αποστολή</button>

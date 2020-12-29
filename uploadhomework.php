@@ -2,6 +2,8 @@
 
 session_start();
 
+    date_default_timezone_set('Europe/Athens');
+    $duedate= date('Y-m-d',strtotime($_POST['date']));
     $file=$_FILES['fileToUpload'];
     $filename=$_FILES['fileToUpload']['name'];
     $filetmpname=$_FILES['fileToUpload']['tmp_name'];
@@ -9,22 +11,28 @@ session_start();
     $fileError=$_FILES['fileToUpload']['error'];
     $extension= pathinfo($filename, PATHINFO_EXTENSION);
     if(!in_array($extension,['zip','docx','doc','pdf','odt'])){
-        echo ("<script> alert(\"Το έγγραφο πρέπει να είναι της μορφής zip,docx,doc,pdf η odt!\");window.location.href='adddocument.php'</script>");
+        echo ("<script> alert(\"Η εκφώνηση πρέπει να είναι της μορφής zip,docx,doc,pdf η odt!\");window.location.href='addhomework.php'</script>");
     }
     if($fileError === 0){
         if($fileSize < 1000000){
             $destination = 'uploads/'.$filename;
             move_uploaded_file($filetmpname,$destination);
-            echo ("<script> alert(\"Το αρχείο μεταφορτώθηκε επιτυχώς\");window.location.href='documents.php';</script>");
+            $insert_post_sql_query=
+            "INSERT INTO `homework`(`goals`,`filename_ann`,`deliveries`,`duedate`) 
+            VALUES (\"".$_POST["content1"]."\",\"".$destination."\",\"".$_POST["content2"]."\",\"".htmlentities($duedate, ENT_QUOTES)."\")";
+            $con = include "config.php";
+            mysqli_query($con,$insert_post_sql_query);
+            unset($_POST["content1"]);unset($_POST["content2"]);
+            echo ("<script> alert(\"Η εργασία μεταφορτώθηκε επιτυχώς\");window.location.href='homework.php';</script>");
             
         
         } else{
-            echo ("<script> alert(\"Υπερβολικά μεγάλο μέγεθος αρχείου\");window.location.href='adddocument.php';</script>");
+            echo ("<script> alert(\"Υπερβολικά μεγάλο μέγεθος αρχείου\");window.location.href='addhomework.php';</script>");
 
         }
 
     } else {
-        echo ("<script> alert(\"Σφάλμα κατά την μεταφόρτωση αρχείου\");window.location.href='adddocument.php'</script>");
+        echo ("<script> alert(\"Σφάλμα κατά την μεταφόρτωση αρχείου\");window.location.href='addhomework.php'</script>");
     }
 
 

@@ -15,6 +15,13 @@ session_start();
         if($fileSize < 1000000){
             $destination = 'uploads/'.$filename;
             move_uploaded_file($filetmpname,$destination);
+            $insert_post_sql_query=
+            "INSERT INTO `documents`(`title`,`descr`,`filename`) 
+            VALUES (\"".htmlentities($_POST["title"],ENT_QUOTES)."\",\"".$_POST["content"]."\",\"".$destination."\")";
+            $con = include "config.php";
+            mysqli_query($con,$insert_post_sql_query);
+            unset($_POST["title"]); unset($_POST["content"]);
+
             echo ("<script> alert(\"Το αρχείο μεταφορτώθηκε επιτυχώς\");window.location.href='documents.php';</script>");
             
         
