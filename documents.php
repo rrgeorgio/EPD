@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+  require("config.php");
+  session_start();
+  
+?>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -9,8 +14,8 @@
 
   <body>
     <div class="page-title">
-   <form action="logout.php" method="post">
-      <input class="log_out" type="submit" value="Log out"/>
+      <form action="logout.php" method="post">
+        <input class="log_out" type="submit" value="Log out"/>
       </form>
       <h1>Έγγραφα μαθήματος</h1>
     </div>
@@ -41,21 +46,24 @@
      <div class="tutor_edit">
       <a href="adddocument.php">Προσθήκη νέου εγγράφου</a>
       </div>
-      <div class="announcement">
-        <p id="header"><b>Τίτλος εγγράφου 1</b></p>
-        <p><i>Περιγραφή:</i>Περιγραφή του περιεχομένου</p>
-        <a href="file1.doc" target="_blank">Download</a>
-      </div>
-
-      <div class="announcement">
-        <p id="header"><b>Τίτλος εγγράφου 2</b></p>
-        <p><i>Περιγραφή:</i>Περιγραφή του περιεχομένου</p>
-        <a href="file2.doc" target="_blank">Download</a>
-      </div>
-
-      <a href="#top">top</a>
       <?php
-          session_start();
+          $total_pages="SELECT COUNT(*) FROM documents";
+          $result=mysqli_query($con,$total_pages);
+          $total_rows=mysqli_fetch_array($result)[0];
+          $all_posts_query="SELECT id,title,descr,filename FROM documents";
+          $all_posts_results=mysqli_query($con,$all_posts_query);
+          if($total_rows>0){
+            while($post=mysqli_fetch_array($all_posts_results)){
+              echo '<div class="announcement">';
+              echo '<p id="header"><b>';echo $post["title"];echo'</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>';
+              echo '<p><b>Περιγραφή: </b>'; echo $post["descr"];echo'</p>';
+              echo '<a href =';echo $post["filename"];echo '>Download</a>';
+              echo '</div>';
+            }
+            echo '<a href="#top">top</a>';
+          }
+      ?>
+      <?php
           function showElements(){ ?>
             <script type='text/javascript'>
             var elements = document.getElementsByClassName('tutor_edit');

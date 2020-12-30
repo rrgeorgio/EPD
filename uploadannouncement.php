@@ -17,7 +17,7 @@ mysqli_query("SET CHARACTER SET 'utf8'");
 
 unset($_POST["theme"]); unset($_POST["content"]);
 echo("
-    <script> alert(\"Επιτυχής δημιουργία ανακοίνωσης!\") </script>
+    <script> alert(\"Επιτυχής δημιουργία ανακοίνωσης!\");window.location.href='announcement.php' </script>
     ");
     header("Location: announcement.php");
 ?>

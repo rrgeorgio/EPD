@@ -48,25 +48,26 @@
         <div class="tutor_edit">
           <a href="addannouncement.php">Προσθήκης νέας ανακοίνωσης</a>
         </div>
-        <div class="announcement">
-          <p id="header"><b>Ανακοίνωση 1</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>
-          <p><b>Ημερομηνία:</b>12/12/2008</p>
-          <p><b>Θέμα:</b>Έναρξη μαθημάτων</p>
-          <p>Τα μαθήματα αρχίζουν τη Δευτέρα 17/12/2008</p>
-        </div>
-
-        <div class="announcement">
-          <p id="header"><b>Ανακοίνωση 2</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>
-          <p><b>Ημερομηνία:</b>15/12/2012</p>
-          <p><b>Θέμα:</b>Ανάρτηση εργασίας</p>
-          <p>
-            Η 1η εργασία έχει ανακοινωθεί στην ιστοσελίδα
-            <a href="homework.php">"Εργασίες"</a>
-          </p>
-          <p>Τα μαθήματα αρχίζουν τη Δευτέρα 17/12/2008</p>
-        </div>
-
-        <a href="#top">top</a>
+        <?php
+          $total_pages="SELECT COUNT(*) FROM announcements";
+          $result=mysqli_query($con,$total_pages);
+          $total_rows=mysqli_fetch_array($result)[0];
+          $all_posts_query="SELECT id,date,theme,text FROM announcements";
+          $all_posts_results=mysqli_query($con,$all_posts_query);
+          if($total_rows>0){
+            while($post=mysqli_fetch_array($all_posts_results)){
+              echo '<div class="announcement">';
+              echo '<p id="header"><b>Ανακοίνωση ';echo $post["id"];echo'</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>';
+              echo '<p><b>Ημερομηνία: </b>';echo $post["date"];echo'</p>';
+              echo '<p><b>Θέμα: </b>'; echo $post["theme"];echo'</p>';
+              echo '<p>';echo $post["text"];echo '</p>';
+              echo '</div>';
+            }
+            echo '<a href="#top">top</a>';
+          }
+        
+        ?>
+        
         <?php
           function showElements(){ ?>
             <script type='text/javascript'>
