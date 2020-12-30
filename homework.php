@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+  require("config.php");
+  session_start();
+  
+?>
 <html>
 
 <head>
@@ -48,47 +53,47 @@
     <div class="tutor_edit">
       <a href="addhomework.php">Προσθήκη νέας εργασίας</a>
     </div>
-    <div class="announcement">
-        <p id="header"><b>Εργασία 1</b></p>
-        <p><i>Στόχοι: Οι στόχοι της εργασίας είναι</i></p>
-        <ol>
-            <li>Στόχος 1</li>
-            <li>Στόχος 2</li>
-            <li>...</li>
-        </ol>
-        <p><i>Εκφώνηση:</i></p>
-        <p>Κατεβάστε την εκφώνηση της εργασίας από <a href="ergasia1.doc" target = "_blank">εδώ.</a></p>
-        <p><i>Παραδοτέα:</i></p>
-        <ol>
-            <li>Γραπτή αναφορά σε word</li>
-            <li>Παρουσίαση σε powerpoint</li>
-        </ol>
-        <p><b id="duedate">Ημερομηνία παράδοσης</b>: 12/5/2009</p>
-    
-    </div>
-    
-    <div class="announcement">
-        <p id="header"><b>Εργασία 2</b></p>
-        <p><i>Στόχοι: Οι στόχοι της εργασίας είναι</i></p>
-        <ol>
-            <li>Στόχος 1</li>
-            <li>Στόχος 2</li>
-            <li>...</li>
-        </ol>
-        <p><i>Εκφώνηση:</i></p>
-        <p>Κατεβάστε την εκφώνηση της εργασίας από <a href="ergasia2.doc" target = "_blank">εδώ.</a></p>
-        <p><i>Παραδοτέα:</i></p>
-        <ol>
-            <li>Γραπτή αναφορά σε word</li>
-            <li>Παρουσίαση σε powerpoint</li>
-        </ol>
-        <p><b  id="duedate">Ημερομηνία παράδοσης</b>: 15/5/2009</p>
-    </div>
-
-
-    <a href="#top">top</a>
     <?php
-          session_start();
+          $total_pages="SELECT COUNT(*) FROM homework";
+          $result=mysqli_query($con,$total_pages);
+          $total_rows=mysqli_fetch_array($result)[0];
+          $all_posts_query="SELECT id,goals,filename_ann,deliveries,duedate FROM homework";
+          $all_posts_results=mysqli_query($con,$all_posts_query);
+          if($total_rows>0){
+            while($post=mysqli_fetch_array($all_posts_results)){
+              $text1=trim($post["goals"]);
+              $text2=trim($post["deliveries"]);
+              $textAr1 = explode("\n", $text1);
+              $textAr1 = array_filter($textAr1, 'trim');  
+              $textAr2 = explode("\n", $text2);
+              $textAr2 = array_filter($textAr2, 'trim');  
+              echo '<div class="announcement">';
+              echo '<p id="header"><b>Εργασία: ';echo $post["id"];echo '</b></p>';
+              echo '<p><i>Στόχοι: Οι στόχοι της εργασίας είναι</i></p>';
+              echo '<ol>';
+              foreach($textAr1 as $line){
+                  echo '<li>';echo $line;echo '</li>';
+              }
+              echo '</ol>';
+              echo '<p><i>Εκφώνηση:</i></p>';
+              echo '<p>Κατεβάστε την εκφώνηση της εργασίας από <a href =';echo $post["filename_ann"];echo '>εδώ</a></p>';
+              echo '<p><i>Παραδοτέα:</i></p>';
+              echo '<ol>';
+              foreach($textAr2 as $line){
+                  echo '<li>';echo $line;echo '</li>';
+              }
+              echo '</ol>';
+              echo '<p><b id="duedate">Ημερομηνία παράδοσης: </b>';echo $post["duedate"];echo'</p>';
+              echo '</div>';
+            }
+            echo '<a href="#top">top</a>';
+          }
+      ?>
+    
+    
+ 
+
+    <?php
           function showElements(){ ?>
             <script type='text/javascript'>
             var elements = document.getElementsByClassName('tutor_edit');

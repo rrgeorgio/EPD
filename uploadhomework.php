@@ -30,6 +30,9 @@ session_start();
             "INSERT INTO `announcements`(`date`,`theme`,`text`) 
             VALUES (\"".$current_date."\",\"".$theme."\",\"".$text."\")";
             mysqli_query($con,$insert_post_sql_query);
+            echo("
+            <script> alert(\"Επιτυχής μεταφόρτωση εργασίας!\");window.location.href='homework.php' </script>
+            ");
             
         } else{
             echo ("<script> alert(\"Υπερβολικά μεγάλο μέγεθος αρχείου\");window.location.href='addhomework.php';</script>");
