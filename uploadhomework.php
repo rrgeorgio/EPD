@@ -25,7 +25,10 @@ session_start();
             $con = include "config.php";
             mysqli_query($con,$insert_post_sql_query);
             unset($_POST["content1"]);unset($_POST["content2"]);
-            $theme="";
+            $id="SELECT * FROM homework ORDER BY id DESC LIMIT 0, 1";
+            $result=mysqli_query($con,$id);
+            $homeworkid=mysqli_fetch_array($result);
+            $theme="Ανακοινώθηκε η εργασία ".$homeworkid["id"];
             $insert_post_sql_query=
             "INSERT INTO `announcements`(`date`,`theme`,`text`) 
             VALUES (\"".$current_date."\",\"".$theme."\",\"".$text."\")";
