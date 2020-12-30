@@ -55,7 +55,7 @@
           if($total_rows>0){
             while($post=mysqli_fetch_array($all_posts_results)){
               echo '<div class="announcement">';
-              echo '<p id="header"><b>';echo $post["title"];echo'</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>';
+              echo '<p id="header"><b>';echo $post["title"];echo '</b></p>';
               echo '<p><b>Περιγραφή: </b>'; echo $post["descr"];echo'</p>';
               echo '<a href =';echo $post["filename"];echo '>Download</a>';
               echo '</div>';
