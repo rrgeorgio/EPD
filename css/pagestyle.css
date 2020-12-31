@@ -84,4 +84,5 @@ h1 {
 }
 .tutor_edit{
   visibility: hidden;
+  display:inline-block;
 }

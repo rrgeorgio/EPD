@@ -57,7 +57,7 @@
           if($total_rows>0){
             while($post=mysqli_fetch_array($all_posts_results)){
               echo '<div class="announcement">';
-              echo '<p id="header"><b>Ανακοίνωση ';echo $post["id"];echo'</b><a class="tutor_edit" href="deleteannouncement.php">[διαγραφή]</a><a class="tutor_edit" href="editannouncement.php">[επεξεργασία]</a></p>';
+              echo '<p id="header"><b>Ανακοίνωση ';echo $post["id"];echo'</b><form action="deleteannouncement.php" method="post"><button class="tutor_edit" type="submit"><input type="hidden" name="postID" value=';echo $post['id'];echo '>Διαγραφή</button> </form>';
               echo '<p><b>Ημερομηνία: </b>';echo $post["date"];echo'</p>';
               echo '<p><b>Θέμα: </b>'; echo $post["theme"];echo'</p>';
               echo '<p>';echo $post["text"];echo '</p>';
